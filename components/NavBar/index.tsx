@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NavItem, NavItemInterface } from "../Navitem";
-
 export function NavBar() {
     const items: NavItemInterface[] = [
         {
@@ -12,21 +11,19 @@ export function NavBar() {
          {
             url: "/about",
             label: "link2"
-
         },
          {
             url: "/link3",
             label: "link3"
-
         },
     ]
   return (
-    <header>
-      <nav className="navbar">
+    <header className="bg-dark shadow-lg shadow-light/5 z-50 relative">
+      <nav className="navbar flex justify-between items-center">
         <Link href="/">
-          <Image src="" width={50} height={50} alt="logo" />
+          <Image src="/logo.png" width={50} height={50} alt="logo" />
         </Link>
-         <ul className="navItems">
+         <ul className="navItems flex justify-center items-center gap-6 ">
           {items.map((item,index)=>( 
             <NavItem
               key={index}
@@ -35,7 +32,7 @@ export function NavBar() {
             />
           ))}
         </ul>
-        <button className="button">button</button>
+        <button className="button bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 trasition-colors duration-300">button</button>
       </nav>
     </header>
   );

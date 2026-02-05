@@ -7,7 +7,7 @@ export interface NavItemInterface {
 export function NavItem(props: NavItemInterface) {
   return (
     <>
-      <li className="navItem">
+      <li className="navItem border-b-2 text-[#EEEEEE]">
         <Link href={props.url}className="navLink">
           {props.label}
         </Link>
