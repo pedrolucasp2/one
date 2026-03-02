@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter} from "next/font/google";
-import "./style.css";
+import { Inter } from "next/font/google";
 import { NavBar } from "@/components/layout/NavBar";
-
+import "./style.css";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -19,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className="scroll-smooth">
+    <html lang="pt-br"  >
       <body
         className={`
           ${inter.className} 
@@ -29,7 +28,10 @@ export default function RootLayout({
         `}
       >
         <NavBar />
-        {children}
+<main className="pt-24">
+     {children}
+</main>
+   
       </body>
     </html>
   );
